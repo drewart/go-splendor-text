@@ -22,7 +22,7 @@ func (s Splendor) Usage() {
 e - Emerald
 s - Sapphire
 r - Ruby
-d - Diamon
+d - Diamond
 o - Onyx
 j - Joker (Gold)
 

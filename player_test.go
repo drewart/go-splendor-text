@@ -48,9 +48,21 @@ func Test_CanBuy(t *testing.T) {
 		want bool
 
 	}{
-		{name: "a1", token: "4s",cards:"",cost:"4s",want:true}
+		{name: "a1", token: "4s",cards:"",cost:"4s",want:true},
 	}
 
-	
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+
+			want := tt.want
+			gems := GenGems(tt.token)
+			got := gems.String(true)
+			if want != got {
+				t.Errorf("test: %swanted: %s != got: %s", tt.name, want, got)
+			}
+		})
+	}
+
+
 	
 }
